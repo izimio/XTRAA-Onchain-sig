@@ -19,6 +19,7 @@ schema_view = get_schema_view(
     validators=["flex", "ssv"],
     public=True,
     permission_classes=[permissions.AllowAny],
+    url="https://xtraa-onchain-sig-u2393.vm.elestio.app/api/v1/"
 )
 
 schema_cache_timeout = 60 * 5  # 5 minutes
