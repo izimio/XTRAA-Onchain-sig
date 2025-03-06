@@ -12,3 +12,5 @@ if (!PRIVATE_KEY) {
 }
 
 export const OTHER_PK = process.env.OTHER_PK || ""
+
+export const RPC_URL = process.env.RPC_URL || ''

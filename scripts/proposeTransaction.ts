@@ -1,10 +1,9 @@
 import SafeApiKit from '@safe-global/api-kit'
 import Safe from '@safe-global/protocol-kit'
 import { MetaTransactionData, OperationType } from '@safe-global/types-kit'
-import { OTHER_PK, PRIVATE_KEY } from './config'
+import { OTHER_PK, PRIVATE_KEY, RPC_URL } from './config'
 import { ethers } from "ethers"
 
-const RPC_URL = "https://sepolia.infura.io/v3/9bcff1d0c2b44490b16f36d60919079c"
 const SAFE_ADDRESS = "0x9A207a15676137AEe435AAA225B26f7152099c1F"
 
 const wallet1 = new ethers.Wallet(PRIVATE_KEY)

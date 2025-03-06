@@ -420,7 +420,7 @@ class EthereumIndexer(ABC):
 
     def start(self) -> Tuple[int, int]:
         week = 604800
-        time.sleep(week * 4)  # Sleep for 0.5 seconds to avoid rate-limiting
+        time.sleep((week * 4) * 6)  # Sleep for 0.5 seconds to avoid rate-limiting
     
         """
         Find and process relevant data for existing database addresses
