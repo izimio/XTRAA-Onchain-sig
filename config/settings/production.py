@@ -67,11 +67,10 @@ ADMIN_URL = env("DJANGO_ADMIN_URL", default="admin/")
 
 # Gunicorn
 # ------------------------------------------------------------------------------
-INSTALLED_APPS += ["gunicorn", "corsheaders"]  # noqa F405
+INSTALLED_APPS += ["gunicorn"]  # noqa F405
 
-MIDDLEWARE.insert(0, "corsheaders.middleware.CorsMiddleware")
-
-CORS_ALLOWED_ORIGINS = [
-    "https://xtraa-onchain-sig-u2393.vm.elestio.app",
-    "https://xtraa.io"
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.xtraa\.io$",
+    r"^https://xtraa\.io$",
+    r"^https://xtraa-onchain-sig-u2393\.vm\.elestio\.app$"
 ]
