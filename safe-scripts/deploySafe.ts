@@ -5,11 +5,10 @@ import Safe, {
     SafeDeploymentConfig
 } from '@safe-global/protocol-kit'
 import { sepolia } from 'viem/chains'
-import { ethers } from 'ethers'
 
 import { PRIVATE_KEY } from './config'
 
-const owners = ["0xFCAffE6C34118F897A9d8f45366d9b88A434fE73", "0x791AFE27366c8AD8F04481ebBD72b37948Cc52d2"]
+const owners = ["0xFCAffE6C34118F897A9d8f45366d9b88A434fE73", "0x642366CAF3964b70574910374De3C1Cbe9f6D620"]
 
 const safeAccountConfig: SafeAccountConfig = {
     owners: owners,
@@ -31,6 +30,8 @@ const main = async () => {
     })
 
     const safeAddress = await protocolKit.getAddress()
+
+    console.log('Safe address:', safeAddress)
 
     const deploymentTransaction = await protocolKit.createSafeDeploymentTransaction()
 

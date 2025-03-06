@@ -4,7 +4,7 @@ import { MetaTransactionData, OperationType } from '@safe-global/types-kit'
 import { OTHER_PK, PRIVATE_KEY, RPC_URL } from './config'
 import { ethers } from "ethers"
 
-const SAFE_ADDRESS = "0x9A207a15676137AEe435AAA225B26f7152099c1F"
+const SAFE_ADDRESS = "0x2F41a7f2ef5F05FF679B98985117b95E2f577FEB"
 
 const wallet1 = new ethers.Wallet(PRIVATE_KEY)
 const wallet2 = new ethers.Wallet(OTHER_PK)

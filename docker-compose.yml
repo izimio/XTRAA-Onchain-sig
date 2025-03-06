@@ -52,7 +52,7 @@ services:
       - redis
     working_dir: /app
     ports:
-      - "8888:8888"
+      - "8888:80"
     volumes:
       - nginx-shared:/nginx
     command: docker/web/run_web.sh
