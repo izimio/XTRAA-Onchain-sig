@@ -62,3 +62,11 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
     r"^https://.*\.xtraa\.io$",
     r"^https://xtraa-onchain-sig-u2393\.vm\.elestio\.app$"
 ]
+
+# Proxy and Swagger fixes
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+USE_X_FORWARDED_HOST = True
+
+SWAGGER_SETTINGS = {
+    "DEFAULT_API_URL": "https://xtraa-onchain-sig-u2393.vm.elestio.app/api/v1/"
+}
