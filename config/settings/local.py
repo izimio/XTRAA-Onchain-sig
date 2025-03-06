@@ -11,7 +11,7 @@ SECRET_KEY = env(
     default="aHdCBMHXuxIxEhfRGFRp7Cp3N9CqEZEEAvwZVlBCazKExkEnzvVs4bYWC8Qqh9lg",
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["*"])
+ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=[".xtraa.io", "xtraa-onchain-sig-u2393.vm.elestio.app"])
 
 REDIS_URL = env.str("REDIS_URL")
 
@@ -55,3 +55,10 @@ DEBUG_TOOLBAR_CONFIG = {
 }
 # https://django-debug-toolbar.readthedocs.io/en/latest/installation.html#internal-ips
 INTERNAL_IPS = ["127.0.0.1", "10.0.2.2"]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^http://localhost(:\d+)?$",
+    r"^https://xtraa.io$",
+    r"^https://.*\.xtraa\.io$",
+    r"^https://xtraa-onchain-sig-u2393\.vm\.elestio\.app$"
+]
