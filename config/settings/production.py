@@ -6,7 +6,7 @@ from .base import env
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=[".xtraa.io", "xtraa-onchain-sig-u2393.vm.elestio.app"])
+ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["*"])
 
 # DATABASES
 # ------------------------------------------------------------------------------
@@ -68,9 +68,3 @@ ADMIN_URL = env("DJANGO_ADMIN_URL", default="admin/")
 # Gunicorn
 # ------------------------------------------------------------------------------
 INSTALLED_APPS += ["gunicorn"]  # noqa F405
-
-CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https://.*\.xtraa\.io$",
-    r"^https://xtraa\.io$",
-    r"^https://xtraa-onchain-sig-u2393\.vm\.elestio\.app$"
-]
